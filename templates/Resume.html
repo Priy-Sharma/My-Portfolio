@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<head>
+    <title>Resume</title>
+    <style>
+
+        img {
+            max-width: 90%; /* Limits the image width to 90% of the viewport width */
+            height: auto; /* Maintains the aspect ratio */
+            padding: 20px; /* Adds padding around the image */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a light shadow around the image */
+            border-radius: 8px; /* Optional: Rounds the corners of the image */
+        }
+    </style>
+</head>
+<body>
+    <img src="../static/images/Resume.png" alt="Priyanka Resume">
+</body>
+{% endblock %}

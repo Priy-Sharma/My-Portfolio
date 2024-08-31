@@ -1,0 +1,274 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<head>
+    <title>Interactive Web Application Project</title>
+    <style>
+
+
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .project-info {
+            flex: 1;
+            max-width: 50%;
+        }
+
+        .image-slider {
+            flex: 1;
+            max-width: 50%;
+        }
+
+        .slides img {
+            width: 100%;
+            display: none;
+            border-radius: 8px;
+        }
+
+        .slides img.active {
+            display: block;
+        }
+
+        a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+        .project-title{
+        color:black; background-color:tomato; font-size:30px
+        }
+        .sub-title{
+        color:black; font-size=20px
+        }
+        strong{
+        color:tomato; font-size:20px
+        }
+        .skills{
+        color:black; font-size=20px
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Potato Leaf Project -->
+        <div class="project-container">
+            <div class="project-info">
+                <h1 class="project-title">Interactive Web Application Project</h1>
+                </br>
+                <h2 class="sub-title">Potato Leaf Disease Identification</h2>
+                <p class="skills"><strong>Skills:</strong><br>
+                    Deep Learning, Convolutional Neural Network (CNN), TensorFlow, Keras, Flask, HTML, CSS
+                </p>
+                <p><strong >Webpage:</strong><br>
+                    <a href="https://09cd0641-d2f9-4af1-9f36-bb04e1b98362.e1-us-cdp-2.choreoapps.dev" target="_blank">View Project</a>
+                </p>
+                <p><strong >GitHub:</strong><br>
+                    <a href="https://github.com/Priy-Sharma/Potato_Leaf_Disease_Identification" target="_blank">GitHub Repository</a>
+                </p>
+            </div>
+            <!-- Add Image Slider here if needed for this project -->
+            <div class="image-slider">
+                <div class="slides slides-2">
+                    <img src="../static/images/Webpage1.png" alt="First Image" class="active">
+                    <img src="../static/images/Webpage2.png" alt="Second Image" class="active">
+                    <img src="../static/images/Webpage3.png" alt="Second Image" class="active">
+                    <img src="../static/images/Webpage4.png" alt="Second Image">
+                </div>
+            </div>
+        </div>
+        <!-- Interactive Supply Chain Project -->
+        <div class="project-container">
+            <div class="project-info">
+                <h1 class="project-title">Interactive Supply Chain Dashboard - Power BI</h1>
+                <p class="skills"><strong>Skills:</strong><br>
+                    Power BI, DAX, Data Cleaning
+                </p>
+                <p><strong>Dashboard Link:</strong><br>
+                    <a href="https://bit.ly/3Z6dhvY" target="_blank">View Project</a>
+                </p>
+                <p><strong>GitHub:</strong><br>
+                    <a href="https://github.com/Priy-Sharma/Supply-Chain-Dashbord_Power-BI" target="_blank">GitHub Repository</a>
+                </p>
+            </div>
+            <div class="image-slider">
+                <div class="slides slides-1">
+                    <img src="../static/images/supply-chain-1.png" alt="First Image" class="active">
+                    <img src="../static/images/supply-chain-2.png" alt="Second Image">
+                </div>
+            </div>
+        </div>
+
+        <!-- India Transformation Project -->
+        <div class="project-container">
+            <div class="project-info">
+                <h1 class="project-title">India Transformation from 2001 to 2011</h1>
+                <p class="skills"><strong>Skills:</strong><br>
+                    ETL (Extract, Transform, Load), Problem Solving, Analytical Thinking, Data Transformation and Cleaning, DAX, Attention to Detail
+                </p>
+                <p><strong>Dashboard Link:</strong><br>
+                    <a href="https://bit.ly/4fWcowb" target="_blank">View Project</a>
+                </p>
+                <p><strong>GitHub:</strong><br>
+                    <a href="https://github.com/Priy-Sharma/Power-Bi-India-Transformation-2001-to-2011" target="_blank">GitHub Repository</a>
+                </p>
+            </div>
+            <div class="image-slider">
+                <div class="slides slides-2">
+                    <img src="../static/images/India1.png" alt="First Image" class="active">
+                    <img src="../static/images/India2.png" alt="Second Image">
+                </div>
+            </div>
+        </div>
+
+        <!-- Excel Project -->
+        <div class="project-container">
+            <div class="project-info">
+                <h1 class="project-title">Credit Card Data Analysis Using Excel</h1>
+                <p class="skills"><strong>Skills:</strong><br>
+                    Excel, Data Analysis, Data Visualization
+                </p>
+                <p><strong>GitHub:</strong><br>
+                    <a href="https://github.com/Priy-Sharma/Credit-Card-Data-Analysis-Excel-Dashboard" target="_blank">GitHub Repository</a>
+                </p>
+            </div>
+            <div class="image-slider">
+                <div class="slides slides-3">
+                    <img src="../static/images/excel.png" alt="Excel Project Image" class="active">
+                </div>
+            </div>
+        </div>
+
+        <!-- Machine Learning -->
+        <div class="project-container">
+            <div class="project-info">
+                <h1 class="project-title">Machine Learning Projects</h1>
+                <h2 class="sub-title">Predictive Maintenance of Milling Machine</h2>
+                <p class="skills"><strong>Skills:</strong><br>
+                    Feature Engineering, Pandas, NumPy, Decision Tree, SVC, Ensemble Learnings, Logistic Regression, Machine Learning Model
+                </p>
+                <p><strong>GitHub:</strong><br>
+                    <a href="https://github.com/Priy-Sharma/Predictive-Maintenance-of-milling-machine" target="_blank">GitHub Repository</a>
+                </p>
+            </div>
+            <div class="image-slider">
+                <div class="slides slides-3">
+                    <img src="../static/images/ml1.png" alt="Machine learning Image" class="active">
+                    <img src="../static/images/ml2.jpg" alt="Machine learning Image" >
+                </div>
+            </div>
+        </div>
+
+        <!-- Recommendation system -->
+        <div class="project-container">
+            <div class="project-info">
+                <h1 class="project-title">Amazon Product Recommendation System </h1>
+                <p class="skills"><strong>Skills:</strong><br>
+                    NLP, Pandas, Scikit-learn, Critical Thinking
+                </p>
+                <p><strong>GitHub:</strong><br>
+                    <a href="https://github.com/Priy-Sharma/Product-Recommendation-System" target="_blank">GitHub Repository</a>
+                </p>
+            </div>
+            <div class="image-slider">
+                <div class="slides slides-3">
+                    <img src="../static/images/recommendation1.png" alt="Machine learning Image">
+                </div>
+            </div>
+        </div>
+
+        <!-- SQL Project -->
+        <div class="project-container">
+            <div class="project-info">
+                <h1 class="project-title">SQL Projects</h1>
+                <p class="skills"><strong>Skills:</strong><br>
+                    MYSQL, Relational Database, Data Retrival, Data Manipulation
+                </p>
+                <p><strong>GitHub:</strong><br>
+                    <a href="https://github.com/Priy-Sharma/SQL-Queries" target="_blank">GitHub Repository</a>
+                </p>
+            </div>
+            <div class="image-slider">
+                <div class="slides slides-3">
+                    <img src="../static/images/SQL2.png" alt="Excel Project Image" class="active">
+                    <img src="../static/images/SQL1.png" alt="Excel Project Image" >
+                </div>
+            </div>
+        </div>
+        <!-- Movie Dataset Analysis -->
+        <div class="project-container">
+            <div class="project-info">
+                <h1 class="project-title">Movie Dataset Analysis</h1>
+                <p class="skills"><strong>Skills:</strong><br>
+                    Pandas, Matplotlib, Seaborn, Plotly
+                </p>
+                <p><strong>GitHub:</strong><br>
+                    <a href="https://github.com/Priy-Sharma/Analysis-of-movie-dataset-in-python" target="_blank">GitHub Repository</a>
+                </p>
+            </div>
+            <div class="image-slider">
+                <div class="slides slides-3">
+                    <img src="../static/images/analysis1.png" alt="Excel Project Image" class="active">
+                    <img src="../static/images/analysis2.png" alt="Excel Project Image" class="active">
+                    <img src="../static/images/analysis3.png" alt="Excel Project Image" class="active">
+                    <img src="../static/images/analysis4.png" alt="Excel Project Image" class="active">
+                    <img src="../static/images/analysis5.png" alt="Excel Project Image">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Function to handle each slider independently
+        function showSlides(slidesContainer) {
+            let slideIndex = 0;
+            const slides = slidesContainer.querySelectorAll('img');
+
+            function displaySlides() {
+                slides.forEach((slide, index) => {
+                    slide.style.display = "none";
+                    slide.classList.remove('active');
+                });
+
+                slideIndex++;
+                if (slideIndex > slides.length) {
+                    slideIndex = 1;
+                }
+
+                slides[slideIndex - 1].style.display = "block";
+                slides[slideIndex - 1].classList.add('active');
+
+                setTimeout(displaySlides, 3000); // Change image every 3 seconds
+            }
+
+            displaySlides();
+        }
+
+        // Initialize each slideshow independently
+        document.querySelectorAll('.slides').forEach(slidesContainer => {
+            showSlides(slidesContainer);
+        });
+    </script>
+</body>
+{% endblock %}
+

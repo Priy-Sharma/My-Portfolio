@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% block content %}
+<head>
+    <style>
+        .hero {
+            background: linear-gradient(90deg, #0D208F , #A71C0C ); /* Sky blue to steel blue gradient */
+            padding: 50px 20px; /* Add some padding to the section */
+            border-radius: 8px; /* Optional: if you want rounded corners */
+            color: white; /* Ensures text is visible against the gradient */
+            width: 100%; /* Make sure it spans the full width */
+            margin: 0; /* Remove default margins */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center items horizontally */
+        }
+
+        .profile-img {
+            width: 150px; /* Adjust the size of the image */
+            height: 150px; /* Ensure it's a square */
+            border-radius: 50%; /* Make it circular */
+            margin: 20px 0; /* Add some space around the image */
+        }
+
+        .about-box {
+            max-width: 800px; /* Limit the width of the text box */
+            text-align: center; /* Center align text */
+            background-color:#F5FA81  ;
+        }
+
+        .btn-secondary {
+            background-color: #6c757d; /* Button color */
+            border-color: #6c757d; /* Button border color */
+        }
+
+        .row {
+            margin: 50px 0; /* Add spacing around the row */
+        }
+
+        .img-placeholder {
+            width: 120px; /* Placeholder image size */
+            height: 120px; /* Placeholder image size */
+        }
+        .about-text {
+        font-family: 'Georgia', serif; /* Set a different font style */
+        font-size: 1.1em; /* Adjust the size */
+        font-style: italic; /* Make text italic */
+        font-weight: 500; /* Semi-bold text */
+        line-height: 1.6; /* Improve readability */
+        color: #f2f2f2; /* Light color for better contrast */
+    }
+    </style>
+</head>
+<body>
+    <section class="hero text-center">
+        <h1>Hello, I'm Priyanka Sharma</h1>
+        <p class="profession" style="color:#F1C40F;">Passionate Data Scientist & Data Analyst</p>
+        <p class="intro-text">I specialize in turning data into actionable insights, driving business decisions, and creating value through analytical solutions.</p>
+        <img src="{{ url_for('static', filename='/images/Priyanka Photo.jpg') }}" alt="Priyanka Sharma" class="profile-img">
+        <div class="about-box">
+            <p class="about-text">Hello, I'm Priyanka Sharma — a two-time gold medalist with a Master's degree in Physics. Driven by my passion for data science,
+                I made a bold pivot from the world of theoretical equations to uncovering actionable insights through data.
+                My academic excellence as a top scorer in my MSc reflects my commitment, and now I’m channeling that same enthusiasm and analytical
+                prowess into data science. I am actively seeking opportunities where I can make a meaningful impact with my skills. Don’t underestimate
+                my journey — I bring the perfect blend of scientific rigor, curiosity, and an unrelenting drive to excel in data science.</p>
+        </div>
+    </section>
+
+    <div class="row justify-content-center">
+        <div class="col-lg-4 text-center">
+            <img src="{{ url_for('static', filename='/images/resume-placeholder.png') }}" alt="Resume" class="rounded-circle img-placeholder">
+            <h2 class="fw-normal">Resume</h2>
+            <p>Explore my resume to see how I can add value and drive success in your projects or team!</p>
+            <p><a class="btn btn-secondary" href="{{ url_for('Resume') }}">View Resume »</a></p>
+        </div>
+<div class="col-lg-4 text-center">
+    <img src="{{ url_for('static', filename='/images/laptop-placeholder.png') }}" alt="Projects" class="rounded-circle img-placeholder">
+    <h2 class="fw-normal">Projects</h2>
+    <p>Explore my projects to see data-driven solutions tackling real-world challenges. Discover insights that can transform ideas into impactful results.</p>
+    <p><a class="btn btn-secondary" href="{{ url_for('Projects') }}">View Projects »</a></p>
+</div>
+
+        <div class="col-lg-4 text-center">
+            <img src="{{ url_for('static', filename='/images/certificates-placeholder.jpg') }}" alt="Certificates" class="rounded-circle img-placeholder">
+            <h2 class="fw-normal">Certificates</h2>
+            <p>My credentials with certificates from relevant courses and achievements.</p>
+            <p><a class="btn btn-secondary" href="{{ url_for('Certificates') }}">View Certificates »</a></p>
+        </div>
+    </div>
+</body>
+{% endblock %}
+
