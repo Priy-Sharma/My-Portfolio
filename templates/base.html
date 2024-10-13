@@ -11,52 +11,92 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body {
-            background-color: #314FF4 ;
+            background-color: #f1f3f5; /* Adjusted to align with the project page style */
             margin: 0;
             padding: 0;
         }
 
-        /* Optional: To ensure the main content area stands out, you can add a light background color to it */
+        /* Optional: To ensure the main content area stands out */
         main {
-            background-color: transparent; /* Keep it transparent or set a different color if needed */
+            background-color: #fff; /* White background for the content */
         }
 
         /* Customize nav-link colors and hover effects */
         .nav-link {
-            color: white; /* White text color for links */
+            color: #343a40; /* Dark gray text color for links */
             transition: color 0.3s; /* Smooth transition for hover effect */
         }
 
         .nav-link:hover {
-            color: #f8f9fa; /* Light gray on hover */
+            color: #495057; /* Slightly lighter gray on hover */
+        }
+
+        /* Contact section styles */
+        .contact-section {
+            background-color: #212529; /* Dark background */
+            color: white; /* White text */
+            padding: 20px;
+        }
+
+        .contact-section h2 {
+            font-size: 2rem;
+        }
+
+        .contact-details i {
+            font-size: 1.5rem;
+            margin-right: 10px;
+            color: #f8c12e; /* Yellow for icons */
+        }
+
+        .contact-details a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .contact-details a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #f0f8ff; /* Light blue background */
+            color: white;
+            padding: 15px;
         }
     </style>
 </head>
 <body>
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-        <ul class="nav nav-pills">
-            <li class="nav-item">
-                <a href="https://github.com/Priy-Sharma" class="nav-link active" aria-current="page" target="_blank">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="https://www.linkedin.com/in/priyanka-sharma812001/" class="nav-link" target="_blank">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-            </li>
-        </ul>
+        <!-- Removed GitHub and LinkedIn buttons -->
     </header>
 
     <main class="container mt-4">
         {% block content %}{% endblock %}
     </main>
 
-    <footer class="bg-dark text-white text-center py-3">
-    <p>&copy; 2024 Priyanka Sharma. All rights reserved.</p>
-    <p>Contact me: <a href="mailto:priyankasharma196v@gmail.com" class="text-white">priyankasharma196v@gmail.com</a></p>
-</footer>
+    <!-- Contact Me Section -->
+    <section class="contact-section text-center">
+        <h2>Contact Me</h2>
+        <p>Below are the details to reach out to me!</p>
+        <div class="row contact-details justify-content-center">
+            <div class="col-md-3">
+                <i class="fas fa-map-marker-alt"></i> Pune, India
+            </div>
+            <div class="col-md-3">
+                <i class="fas fa-phone"></i> +917057016465
+            </div>
+            <div class="col-md-3">
+                <i class="fas fa-envelope"></i> <a style="color:black;" href="mailto:priyankasharma196v@gmail.com">priyankasharma196v@gmail.com</a>
+            </div>
+            <div class="col-md-3">
+                <i class="fas fa-file-download"></i> <a style="color:black;" href="https://drive.google.com/drive/folders/1bizmGh3ORsT4ho9VKJFMuAXxmhkNKodp?usp=sharing" target="_blank">Download Resume</a>
+            </div>
+        </div>
+    </section>
 
+    <footer class="text-center">
+        <p>&copy; 2024 Priyanka Sharma. All rights reserved.</p>
+    </footer>
 
     <!-- Bootstrap JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -64,4 +104,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+
+
 
