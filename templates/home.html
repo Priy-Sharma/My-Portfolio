@@ -2,68 +2,166 @@
 {% block content %}
 <head>
     <style>
+        /* Overall background color */
+        body {
+            background-color: #f1f3f5; /* Light grey similar to project page */
+        }
+
+        /* Hero section with gradient background */
         .hero {
-            background: linear-gradient(90deg, #0D208F , #A71C0C ); /* Sky blue to steel blue gradient */
-            padding: 50px 20px; /* Add some padding to the section */
-            border-radius: 8px; /* Optional: if you want rounded corners */
-            color: white; /* Ensures text is visible against the gradient */
-            width: 100%; /* Make sure it spans the full width */
-            margin: 0; /* Remove default margins */
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* Center items horizontally */
-        }
-        .img-placeholder {
-    width: 120px;
-    height: 120px;
-    background-color: white; /* Add this line to ensure a white background */
-    border-radius: 50%;
-    }
+    background: linear-gradient(90deg, #007bff, #20b2aa); /* Soft blue to teal */
+    padding: 50px 20px;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
 
+
+
+
+        /* Profile image */
         .profile-img {
-            width: 150px; /* Adjust the size of the image */
-            height: 150px; /* Ensure it's a square */
-            border-radius: 50%; /* Make it circular */
-            margin: 20px 0; /* Add some space around the image */
+            width: 300px;
+            height: 300px;
+            border-radius: 5%;
+            margin: 20px 0;
+            border: 2px solid #20b2aa; /* Add a white border for a cleaner look */
         }
 
-        .about-box {
-            max-width: 800px; /* Limit the width of the text box */
-            text-align: center; /* Center align text */
-            background-color:#F5FA81  ;
+        /* About section box styling */
+        /* About section box styling - Monochromatic with light blue and grey tones */
+.about-box {
+    max-width: 800px;
+    margin: 20px auto;
+    background: linear-gradient(90deg, #f0f8ff, #f8f9fa); /* Light blue to light grey gradient */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Lighter shadow for subtle depth */
+    border: 1px solid #d3d9de; /* Subtle grey border to match page style */
+}
+
+.about-text {
+    font-family: 'Georgia', serif;
+    font-size: 1.1em;
+    font-style: italic;
+    line-height: 1.6;
+    color: #333;
+}
+
+
+        /* Social buttons styling */
+        .btn-link {
+            background-color: #007bff; /* Blue for buttons */
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 10px;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
         }
 
+        .btn-link:hover {
+            background-color: #0056b3; /* Slightly darker blue on hover */
+        }
+
+        /* Project and Certificate section styling */
+        .section-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for a professional look */
+            text-align: center;
+            margin-bottom: 30px;
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+
+        .section-box:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px); /* Subtle lift on hover */
+        }
+
+        /* Section titles */
+        h2 {
+            color: #333;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #555;
+            font-size: 1.1em;
+        }
+
+        /* Button styling for secondary buttons */
         .btn-secondary {
-            background-color: #6c757d; /* Button color */
-            border-color: #6c757d; /* Button border color */
+            background-color: #007bff; /* Blue background for buttons */
+            border-color: #007bff;
+            color: white;
         }
 
-        .row {
-            margin: 50px 0; /* Add spacing around the row */
-        }
-
+        /* Profile picture placeholder in rounded shape */
         .img-placeholder {
-            width: 120px; /* Placeholder image size */
-            height: 120px; /* Placeholder image size */
+            width: 120px;
+            height: 120px;
+            background-color: white;
+            border-radius: 50%;
         }
-        .about-text {
-        font-family: 'Georgia', serif; /* Set a different font style */
-        font-size: 1.1em; /* Adjust the size */
-        font-style: italic; /* Make text italic */
-        font-weight: 500; /* Semi-bold text */
-        line-height: 1.6; /* Improve readability */
-        color: black; /* Light color for better contrast */
-    }
+
+        /* Social buttons container */
+        .social-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        /* Row styling for the projects and certificates section */
+        .row {
+            margin-top: 50px;
+        }
+
+        /* Contact Me section styling */
+        .contact-section {
+            text-align: center;
+            padding: 40px;
+            background-color: #f0f8ff; /* Light blue background */
+            border-top: 2px solid #004085; /* Blue border similar to project.htm page */
+            color: #333;
+            margin-top: 30px;
+        }
+
+        .contact-section h2 {
+            color: #004085; /* Blue heading */
+        }
+
+        .contact-section p {
+            color: #333;
+            font-size: 1.1em;
+        }
+        .styled-heading {
+    font-family: 'Arial', sans-serif; /* Change to your preferred font */
+    font-size: 3em; /* Increase the font size */
+    color: #white; /* Nice blue color */
+    font-weight: bold; /* Make the font bold */
+    text-align: center; /* Center align the text */
+    letter-spacing: 1px; /* Adds some spacing between letters */
+    margin-top: 20px; /* Adds space above */
+    margin-bottom: 10px; /* Adds space below */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+}
     </style>
 </head>
+
 <body>
-    <section class="hero text-center">
-        <h1>Hello, I'm Priyanka Sharma</h1>
+    <section class="hero">
+        <h1 class="styled-heading">Hello, I'm Priyanka Sharma</h1>
         <p class="profession" style="color:#F1C40F;">Passionate Data Scientist & Data Analyst</p>
-        <p class="intro-text">I specialize in turning data into actionable insights, driving business decisions, and creating value through analytical solutions.</p>
+        <p class="intro-text" style="color:white; font-size:20px;">I specialize in turning data into actionable insights, driving business decisions, and creating value through analytical solutions.</p>
         <img src="{{ url_for('static', filename='/images/Priyanka Photo.jpg') }}" alt="Priyanka Sharma" class="profile-img">
         <div class="about-box">
-            <p class="about-text" >Hello, I'm Priyanka Sharma — a two-time gold medalist with a Master's degree in Physics. Driven by my passion for data science,
+            <p class="about-text">Two-time gold medalist with a Master's degree in Physics. Driven by my passion for data science,
                 I made a bold pivot from the world of theoretical equations to uncovering actionable insights through data.
                 My academic excellence as a top scorer in my MSc reflects my commitment, and now I’m channeling that same enthusiasm and analytical
                 prowess into data science. I am actively seeking opportunities where I can make a meaningful impact with my skills. Don’t underestimate
@@ -71,31 +169,33 @@
         </div>
     </section>
 
-    <div class="row justify-content-center">
-        <div class="col-lg-4 text-center">
-            <img src="{{ url_for('static', filename='/images/resume-placeholder.png') }}" alt="Resume" class="rounded-circle img-placeholder">
-            <h2 class="fw-normal">Resume</h2>
-            <p style="color:white">Explore my resume to see how I can add value and drive success in your projects or team!</p>
-            <p><a class="btn btn-secondary" href="{{ url_for('Resume') }}">View Resume »</a></p>
-        </div>
-<div class="col-lg-4 text-center">
-    <img src="{{ url_for('static', filename='/images/laptop-placeholder.png') }}" alt="Projects" class="rounded-circle img-placeholder">
-    <h2 class="fw-normal">Projects</h2>
-    <p style="color:white">Explore my projects to see data-driven solutions tackling real-world challenges. Discover insights that can transform ideas into impactful results.</p>
-    <p><a class="btn btn-secondary" href="{{ url_for('Projects') }}">View Projects »</a></p>
+    <!-- Social links section (GitHub, LinkedIn) -->
+    <div class="social-container">
+    <a href="https://github.com/Priy-Sharma" class="btn-link" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/priyanka-sharma812001/" class="btn-link" target="_blank">LinkedIn</a>
 </div>
 
-        <div class="col-lg-4 text-center">
+
+    <!-- Projects and Certificates section -->
+    <div class="row justify-content-center">
+        <div class="col-lg-6 text-center section-box">
+            <img src="{{ url_for('static', filename='/images/laptop-placeholder.png') }}" alt="Projects" class="rounded-circle img-placeholder">
+            <h2>Projects</h2>
+            <p>Explore my projects to see data-driven solutions tackling real-world challenges. Discover insights that can transform ideas into impactful results.</p>
+            <p><a class="btn btn-secondary" href="{{ url_for('Projects') }}">View Projects »</a></p>
+        </div>
+
+        <div class="col-lg-6 text-center section-box">
             <img src="{{ url_for('static', filename='/images/certificates-placeholder.jpg') }}" alt="Certificates" class="rounded-circle img-placeholder">
-            <h2 class="fw-normal">Certificates</h2>
-            <p style="color:white">My credentials with certificates from relevant courses and achievements.</p>
+            <h2>Certificates</h2>
+            <p>My credentials with certificates from relevant courses and achievements.</p>
             <p><a class="btn btn-secondary" href="{{ url_for('Certificates') }}">View Certificates »</a></p>
         </div>
     </div>
+
+    <!-- Contact Me Section -->
+
 </body>
 {% endblock %}
-
-
-
 
 
